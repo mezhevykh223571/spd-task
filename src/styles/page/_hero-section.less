@@ -1,3 +1,16 @@
 .hero-section {
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
+  background: url('../img/section-images/Header_Panel.jpg') no-repeat center top/cover;
+  color: #fff;
+  .left-col {
+    @media (min-width: 1024px) {
+      max-width: 512px;
+    }
+    .heading-wrapper {
+      text-transform: uppercase;
+    }
+    .description-wrapper {
+      opacity: .8;
+    }
+  }
 }

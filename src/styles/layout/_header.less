@@ -7,13 +7,21 @@
   position: fixed;
   z-index: 999;
   a {
-    padding: 30px;
-    color: @headerMenuLinkColor;
+    color: @headerLinkDarken;
     display: inline-block;
+    &:hover {
+      color: @headerLink;
+    }
   }
+}
+
+.navbar-right {
   .menu {
+    display: flex;
     li {
       a {
+        padding: 29px 23px;
+        font-weight: 600;
         &:hover {
           background: @secondary;
         }
@@ -21,6 +29,7 @@
       &:hover {
         .menu-depth-2 {
           opacity: 1;
+          visibility: visible;
           z-index: 1;
         }
       }
@@ -29,6 +38,7 @@
   .menu-depth-2 {
     width: 100%;
     opacity: 0;
+    visibility: hidden;
     transition: @transition;
     position: absolute;
     left: 0;
@@ -36,10 +46,11 @@
     li {
       a {
         padding: 0;
-        color: @headerSubMenuLinkColor;
+        color: @headerSubMenuLink;
+        font-weight: 400;
         &:hover {
           color: @secondary;
-          background: #fff;
+          background: transparent;
         }
       }
     }
@@ -51,16 +62,20 @@
       width: 50%;
       float: right;
       columns: 4;
+      li {
+        width: 100%;
+      }
     }
   }
 }
 
 .desktop-navbar {
-  display: none;
-  position: relative;
+  //display: none;
+  //position: relative;
   @media (min-width: 992px) {
-    .d-flex();
-    justify-content: space-between;
+    //.d-flex();
+    //align-items: center;
+    //justify-content: space-between;
   }
 }
 
