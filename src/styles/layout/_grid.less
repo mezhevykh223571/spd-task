@@ -1,0 +1,18 @@
+@gutter: 30px;
+
+.container {
+  width: 100%;
+  padding-right: (@gutter / 2);
+  padding-left: (@gutter / 2);
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 1200px) {
+    max-width: 1170px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+}

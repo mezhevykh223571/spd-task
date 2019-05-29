@@ -13,7 +13,7 @@ import builtins from 'rollup-plugin-node-builtins'
 import autoprefixer from 'gulp-autoprefixer'
 import cleanCSS from 'gulp-clean-css'
 
-import { handleError, project, targets } from '../index'
+import { handleError, liveEnv, project, targets } from '../index'
 
 // Styles
 const styleSrcDir = project.sourceDirectory + '/' + project.stylesDirectory
@@ -29,7 +29,7 @@ const jsFileName = project.jsMinFileName
 export default function () {
   function styles () {
     return gulp
-      .src(styleSrcDir + '/**/*.less')
+      .src(styleSrcDir + '/main.less')
       .pipe(plumber({ errorHandler: handleError }))
       .pipe(sourcemaps.init())
       .pipe(less())
@@ -62,7 +62,6 @@ export default function () {
       }, 'umd'))
       .pipe(plumber({ errorHandler: handleError }))
       .pipe(sourcemaps.init())
-      .pipe(babel({ compact: true }))
       .pipe(concat(jsFileName))
       .pipe(terser())
       .pipe(sourcemaps.write())
