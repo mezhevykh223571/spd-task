@@ -1,31 +1,13 @@
 @import "../utils/_variables";
 
-// Font sizes
-@fs-h1: 40px;
-@fs-h2: 36px;
-@fs-h3: 20px;
-@fs-h4: 16px;
-@fs-h5: 12px;
-@fs-h6: 8px;
-
-@fs-main: 14px;
-
-// Font Color
-@prim-text-color: #86878b;
-
-body {
-  color: @prim-text-color;
-  font-family: @font-primary;
-  font-size: @fs-main;
-}
-
-h1, h3, h5 {
-  font-family: @font-primary;
-}
-
-h2, h4, h6 {
+h1, h2 {
   font-family: @font-secondary;
 }
+
+h3, h4, h5 h6 {
+  font-family: @font-primary;
+}
+
 
 h1 {
   font-size: @fs-h1;

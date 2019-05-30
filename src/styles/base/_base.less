@@ -1,3 +1,5 @@
+@import "../utils/_variables";
+
 /* Turn on font smoothing (does't working in IE) */
 * {
   -webkit-font-smoothing: antialiased;
@@ -26,14 +28,23 @@ form, input, textarea {
   vertical-align: baseline;
 }
 
+footer, header, nav, section {
+  display: block;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  line-height: @line-height;
   box-sizing: border-box;
 }
 
 body {
-  line-height: 1;
+  margin: 0;
+  color: @prim-text-color;
+  font-family: @font-primary;
+  font-size: @fs-main;
+  text-align: left;
 }
 
 ul {
