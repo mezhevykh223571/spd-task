@@ -1,4 +1,5 @@
 @import "../utils/_variables";
+@import "../utils/_mixins";
 
 h1, h2 {
   font-family: @font-secondary;
@@ -8,27 +9,33 @@ h3, h4, h5 h6 {
   font-family: @font-primary;
 }
 
-
 h1 {
-  font-size: @fs-h1;
+  .font(@fs-h1);
 }
 
 h2 {
-  font-size: @fs-h2;
+  .font(@fs-h2);
 }
 
 h3 {
-  font-size: @fs-h3;
+  color: @fs-h3-color;
+  .font(@fs-h3);
 }
 
 h4 {
-  font-size: @fs-h4;
+  .font(@fs-h4);
 }
 
 h5 {
-  font-size: @fs-h5;
+  .font(@fs-h5);
 }
 
 h6 {
-  font-size: @fs-h6;
+  .font(@fs-h6);
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: @fs-main;
+  line-height: 20px;
 }

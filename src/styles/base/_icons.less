@@ -1,0 +1,46 @@
+@import "../utils/_variables";
+
+.social-networks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.icon {
+  max-height: 23px;
+  transition: all 1.5s cubic-bezier(0.36, 0.86, 0.62, 1.04);
+  @media (min-width: @md) {
+    max-height: 46px;
+  }
+  &:hover {
+    transform: rotate(720deg);
+  }
+}
+
+.icon-facebook {
+  content: url('../img/social-icons/facebook-icon.svg');
+}
+
+.icon-twitter {
+  content: url('../img/social-icons/twitter-icon.svg');
+}
+
+.icon-google-plus {
+  content: url('../img/social-icons/google-plus-icon.svg');
+}
+
+.icon-pinterest {
+  content: url('../img/social-icons/pinterest-icon.svg');
+}
+
+.icon-instagram {
+  content: url('../img/social-icons/instagram-icon.svg');
+}
+
+.icon-stumbleupon {
+  content: url('../img/social-icons/stumbleupon-icon.svg');
+}
+
+.icon-rss {
+  content: url('../img/social-icons/rss-icon.svg');
+}

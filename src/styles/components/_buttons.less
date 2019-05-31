@@ -1,28 +1,29 @@
-@btn-prim: #ff9b51;
-@btn-prim-hover: rgba(@btn-prim, .7);
+@import "../utils/_variables";
+
+@btn-prim-hover: rgba(@secondary, .7);
 
 @btn-sec: #fff;
-@btn-sec-hov: #333;
 
 .btn {
-  display: inline-block;
-  font: 600 15px @font-primary;
   color: #fff;
+  font: 600 15px @font-primary;
+  display: inline-block;
 }
 
 .btn-primary {
   padding: 11px 24px 15px;
-  background: @btn-prim;
+  background: @secondary;
+  border-radius: 3px;
   &:hover {
     background: @btn-prim-hover;
   }
 }
 
 .btn-secondary {
-  padding: 8px 30px 12px;
+  padding: 10px 30px;
   border: 1px solid @btn-sec;
   &:hover {
-    color: @btn-sec-hov;
+    color: @sec-text-color;
     background: @btn-sec;
   }
 }

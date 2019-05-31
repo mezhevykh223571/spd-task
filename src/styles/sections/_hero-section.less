@@ -1,0 +1,56 @@
+@import "../utils/_variables";
+
+@text-color: #fff;
+
+.hero-section {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  min-height: calc(100vh - 72px);
+  background: url('../img/section-images/Header_Panel.jpg') no-repeat center top/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .left-col {
+    padding-bottom: 50px;
+    text-align: center;
+    @media (min-width: @md) {
+      padding-bottom: 0;
+      max-width: 520px;
+      width: 100%;
+      text-align: left;
+    }
+    .heading-wrapper {
+      text-transform: uppercase;
+      &:after {
+        content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAQBAMAAABD6/TTAAAAAXNSR0IB2cksfwAAADBQTFRFAAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa5tLzAAAABB0Uk5TAAECAwQF/wcICgsMDQYJDhQ+CqgAAACPSURBVHicY2AAAkZB3ECAAQKAapRwA6g6RiElY3xASRGkTFDZxTUUNwhxMRIEGWWWhh8kAw1jVHYjoCrFSIBBUCW8c9XuPWewg9O7V80odRJkEDK58XLP+f+4wJ/T83qdFYlURZyNjMq+Fe9m4gbv2q8AXc8oZBJbXtGBC7SXX3UGBStRoUpkDBEX28SkHAB/Xt9l1WAMzAAAAABJRU5ErkJggg==');
+      }
+      @media (min-width: @md) {
+        padding-bottom: 26px;
+      }
+      h2 {
+        padding-bottom: 28px;
+        color: @text-color;
+      }
+    }
+    .description-wrapper {
+      padding-bottom: 20px;
+      @media (min-width: @md) {
+        padding-bottom: 44px;
+      }
+      h3 {
+        color: rgba(@text-color, .8);
+        font-family: @font-secondary;
+        font-size: 16px;
+      }
+    }
+  }
+  .right-col {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 360px;
+    width: 100%;
+    @media (min-width: @md) {
+      margin-right: 0;
+    }
+  }
+}

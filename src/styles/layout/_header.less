@@ -1,5 +1,9 @@
-@import "../utils/_mixins";
 @import "../utils/_variables";
+@import "../utils/_mixins";
+
+// Header Colors
+@headerLink: #fff;
+@headerLinkDarken: rgba(@headerLink, .69);
 
 .navbar {
   width: 100%;
@@ -20,7 +24,7 @@
     display: flex;
     li {
       a {
-        padding: 29px 23px;
+        padding: 28px 23px;
         font-weight: 600;
         &:hover {
           background: @secondary;
@@ -37,6 +41,7 @@
   }
   .menu-depth-2 {
     width: 100%;
+    background: #fff;
     opacity: 0;
     visibility: hidden;
     transition: @transition;
@@ -46,7 +51,7 @@
     li {
       a {
         padding: 0;
-        color: @headerSubMenuLink;
+        color: @prim-text-color;
         font-weight: 400;
         &:hover {
           color: @secondary;
@@ -70,17 +75,14 @@
 }
 
 .desktop-navbar {
-  //display: none;
-  //position: relative;
-  @media (min-width: 992px) {
-    //.d-flex();
-    //align-items: center;
-    //justify-content: space-between;
+  display: none;
+  @media (min-width: @md) {
+    display: block;
   }
 }
 
 .mobile-navbar {
-  @media (min-width: 992px) {
+  @media (min-width: @md) {
     display: none;
   }
 }
