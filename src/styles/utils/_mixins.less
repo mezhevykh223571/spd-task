@@ -1,3 +1,5 @@
+@import "_variables";
+
 .d-flex() {
   display: flex;
   flex-direction: row;
@@ -10,4 +12,33 @@
     display: block;
     clear: both;
   }
+}
+
+.font(@string) {
+  font-size: @string * 1px;
+  line-height: @string * 1.2px;
+}
+
+.placeholder(@rules) {
+  &::-webkit-input-placeholder {
+    @rules();
+  }
+  &:-moz-placeholder {
+    @rules();
+  }
+  &::-moz-placeholder {
+    @rules();
+  }
+  &:-ms-input-placeholder {
+    @rules();
+  }
+}
+
+.header-divider() {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 64px;
+  background: @secondary;
+  position: absolute;
 }

@@ -1,3 +1,5 @@
+@import "../utils/_variables";
+
 body {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@ body {
 }
 
 .site-main {
-  @media (min-width: 992px) {
+  @media (min-width: @md) {
     padding-top: 72px;
   }
 }
