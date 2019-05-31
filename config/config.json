@@ -12,6 +12,9 @@
       "cssMinFileName": "main.min.css",
       "cssLibsMinFileName": "libscss.min.css"
     },
+    "server": {
+      "port": "5000"
+    },
     "autoprefixer": [
       "last 2 versions",
       "safari 8",

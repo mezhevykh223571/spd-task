@@ -1,0 +1,78 @@
+@import "../utils/_variables";
+
+ul.tabs {
+  padding-bottom: 44px;
+  width: 100%;
+  @media (min-width: @sm) {
+    padding-bottom: 0;
+    width: 80px;
+  }
+  @media (min-width: @xl) {
+    width: 112px;
+  }
+  .tab {
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    background: @primary;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid @prim-text-color;
+    cursor: pointer;
+    transition: @transition;
+    @media (min-width: @sm) {
+      padding-top: 30.5px;
+      padding-bottom: 30.5px;
+    }
+    @media (min-width: @xl) {
+      padding-top: 46.5px;
+      padding-bottom: 46.5px;
+    }
+    &:first-of-type {
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+    &:last-of-type {
+      border-bottom: 1px solid transparent;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &:hover {
+      background: lighten(@secondary, 5%);
+    }
+    &.active {
+      background: @secondary;
+    }
+  }
+}
+
+.tab-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s cubic-bezier(.29, .22, .6, 1.01);
+  position: absolute;
+  @media (min-width: @sm) {
+    padding-left: 45px;
+    width: calc(100% - 80px);
+  }
+  @media (min-width: @md) {
+    padding-left: 75px;
+  }
+  @media (min-width: @xl) {
+    padding-left: 100px;
+    width: calc(100% - 112px);
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    position: inherit;
+  }
+  .btn {
+    transition: none;
+  }
+}

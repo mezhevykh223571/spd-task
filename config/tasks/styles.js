@@ -9,7 +9,7 @@ import concat from 'gulp-concat'
 
 import { handleError, liveEnv, targets, project } from '../index'
 
-const lessPaths = project.sourceDirectory + '/' + project.stylesDirectory + '/**/main.less'
+const lessPaths = project.sourceDirectory + '/' + project.stylesDirectory + '/main.less'
 const autoprefixerSettings = targets.autoprefixer
 const cssFileName = project.cssMinFileName
 const dest = project.distDirectory + '/' + project.stylesDirectory

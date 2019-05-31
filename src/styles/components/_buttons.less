@@ -1,0 +1,28 @@
+@btn-prim: #ff9b51;
+@btn-prim-hover: rgba(@btn-prim, .7);
+
+@btn-sec: #fff;
+@btn-sec-hov: #333;
+
+.btn {
+  display: inline-block;
+  font: 600 15px @font-primary;
+  color: #fff;
+}
+
+.btn-primary {
+  padding: 11px 24px 15px;
+  background: @btn-prim;
+  &:hover {
+    background: @btn-prim-hover;
+  }
+}
+
+.btn-secondary {
+  padding: 8px 30px 12px;
+  border: 1px solid @btn-sec;
+  &:hover {
+    color: @btn-sec-hov;
+    background: @btn-sec;
+  }
+}

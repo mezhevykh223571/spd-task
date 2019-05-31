@@ -1,13 +1,5 @@
 @charset 'utf-8';
 
-// Utils
-@import "utils/_variables";
-@import "utils/_functions";
-@import "utils/_mixins";
-
-// Vendors
-//@import "vendors/";
-
 // Base
 @import "base/_base";
 @import "base/_typography";
@@ -17,13 +9,28 @@
 @import "layout/_header";
 @import "layout/_page";
 @import "layout/_footer";
+@import "layout/_grid";
 
 // Components
 @import "components/_buttons";
-@import "components/_media";
 
-// Pages
-@import "pages/_home";
+// Page
+@import "page/_hero-section";
+@import "page/_social-media-section";
+@import "page/_tabs-section";
 
-// Overrides
-//@import "overrides/";
+.d-flex {
+  .d-flex()
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.clearfix {
+  .clearfix()
+}
