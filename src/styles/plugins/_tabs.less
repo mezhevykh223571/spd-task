@@ -1,5 +1,8 @@
 @import "../utils/_variables";
 
+@tab-height-sm: 61px;
+@tab-height-xl: 93px;
+
 ul.tabs {
   padding-bottom: 44px;
   width: 100%;
@@ -11,7 +14,7 @@ ul.tabs {
     width: 112px;
   }
   .tab {
-    padding: 10px;
+    padding: 15px;
     width: 100%;
     color: #fff;
     background: @primary;
@@ -21,14 +24,14 @@ ul.tabs {
     text-transform: uppercase;
     border-bottom: 1px solid @prim-text-color;
     cursor: pointer;
-    transition: @transition;
+    transition: visibility .3s ease-in;
     @media (min-width: @sm) {
-      padding-top: 30.5px;
-      padding-bottom: 30.5px;
+      padding-top: (@tab-height-sm / 2);
+      padding-bottom: (@tab-height-sm / 2);
     }
     @media (min-width: @xl) {
-      padding-top: 46.5px;
-      padding-bottom: 46.5px;
+      padding-top: (@tab-height-xl / 2);
+      padding-bottom: (@tab-height-xl / 2);
     }
     &:first-of-type {
       border-top-right-radius: 3px;
@@ -71,8 +74,5 @@ ul.tabs {
     opacity: 1;
     visibility: visible;
     position: inherit;
-  }
-  .btn {
-    transition: none;
   }
 }
