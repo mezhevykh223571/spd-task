@@ -4,7 +4,7 @@ export default function () {
   return function (done) {
     return gulp
       .series(
-        'styles', 'js', 'fonts', 'images'
+        'styles', 'scripts', 'fonts', 'images'
       )(done)
   }
 }

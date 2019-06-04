@@ -1,0 +1,59 @@
+@border-color: #fff;
+@list-bg: #fff;
+
+.card {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  font-weight: 700;
+  @media (min-width: @sm) {
+    max-width: (100% / 3);
+  }
+  &-header {
+    color: #fff;
+    background: @primary;
+    border-bottom: 5px solid @secondary;
+    .card-title {
+      padding: 17px 15px;
+      .font(20px);
+      font-weight: 700;
+      border-bottom: 1px solid @border-color;
+    }
+    .card-cost {
+      font-family: @font-secondary;
+      border-bottom: 1px solid @border-color;
+      @media (min-width: @sm) {
+        .font(94px);
+      }
+      .dollar {
+        @media (min-width: @sm) {
+          .font(35px);
+        }
+      }
+    }
+    .card-sutitle {
+      padding: 18px 15px;
+      .font(14px);
+      font-style: italic;
+      opacity: .5;
+    }
+    .card-text {
+
+    }
+  }
+  &-content {
+    .card-list {
+      background: @list-bg;
+      li {
+        padding: 12px 15px;
+        color: @prim-text-color;
+        font-weight: 400;
+        text-transform: uppercase;
+        display: block;
+        &:not(:last-of-type) {
+          border-bottom: 1px solid @bg-color;
+        }
+      }
+    }
+  }
+}
