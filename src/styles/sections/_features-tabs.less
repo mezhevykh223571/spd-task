@@ -1,0 +1,63 @@
+.features-tabs-section {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background: @bg-color;
+  @media (min-width: @sm) {
+    padding-top: 90px;
+    padding-bottom: 65px;
+  }
+  @media (min-width: @md) {
+    padding-top: 147px;
+    padding-bottom: 112px;
+  }
+  .heading-wrapper {
+    padding-bottom: 31px;
+    font-weight: 700;
+    @media (min-width: @md) {
+      padding-bottom: 47px;
+    }
+  }
+  .description-wrapper {
+    padding-bottom: 35px;
+    @media (min-width: @md) {
+      padding-bottom: 55px;
+    }
+  }
+  .tab-content {
+    .tab-text-wrapper {
+      margin-right: auto;
+      margin-left: auto;
+      padding-bottom: 45px;
+      align-self: center;
+      text-align: center;
+      max-width: 430px;
+      width: 100%;
+      @media (min-width: @sm) {
+        padding-bottom: 0;
+        max-width: 350px;
+        text-align: left;
+      }
+      @media (min-width: @md) {
+        max-width: 420px;
+      }
+      @media (min-width: @xl) {
+        max-width: 480px;
+      }
+    }
+    .tab-image-wrapper {
+      align-self: center;
+      width: 100%;
+      text-align: center;
+      @media (min-width: @sm) {
+        max-width: 170px;
+        text-align: left;
+      }
+      @media (min-width: @md) {
+        max-width: 280px;
+      }
+      @media (min-width: @xl) {
+        max-width: 320px;
+      }
+    }
+  }
+}

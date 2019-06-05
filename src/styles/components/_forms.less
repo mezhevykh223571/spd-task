@@ -13,6 +13,7 @@
 
 // Buttons
 @button-bg-hover: lighten(@secondary, 5%);
+@button-bg-focus: darken(@secondary, 10%);
 
 input:not([type="button"]),
 textarea {
@@ -20,11 +21,18 @@ textarea {
   width: 100%;
   color: @form-fields-text-color;
   box-shadow: 0 1px 0 @form-fields-border-color;
+  transition: @transition;
   .placeholder({
     color: @placeholder-text-color;
   });
-  &:focus {
+  &:hover {
     box-shadow: 0 1px 0 @secondary;
+  }
+  &:focus {
+    box-shadow: 0 1px 0 @primary;
+    .placeholder({
+      color: @prim-text-color;
+    });
   }
 }
 
@@ -39,6 +47,9 @@ button {
   cursor: pointer;
   &:hover {
     background: @button-bg-hover;
+  }
+  &:focus {
+    background: @button-bg-focus;
   }
 }
 

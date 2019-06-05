@@ -3,13 +3,13 @@
 .hero-section {
   padding-top: 65px;
   padding-bottom: 65px;
-  min-height: calc(100vh - 72px);
+  min-height: 100vh;
   background: url('../img/Header_Panel.jpg') no-repeat center top/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   .left-col {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
     text-align: center;
     @media (min-width: @md) {
       padding-bottom: 0;
@@ -32,19 +32,15 @@
         background: url('../img/divider_white_u72_copy.png') no-repeat center;
       }
       h2 {
-        //padding-bottom: 28px;
         color: @text-color;
       }
     }
     .description-wrapper {
-      padding-bottom: 20px;
-      @media (min-width: @md) {
-        padding-bottom: 44px;
-      }
+      padding-bottom: 44px;
       h3 {
         color: rgba(@text-color, .8);
         font-family: @font-secondary;
-        font-size: 16px;
+        .font(16px);
       }
     }
   }

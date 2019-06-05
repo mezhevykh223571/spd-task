@@ -1,6 +1,5 @@
 import jQuery from 'jquery'
 import './plugins/tabs'
-import './plugins/parallax'
 
 window.$ = window.jQuery = jQuery
 
@@ -15,5 +14,3 @@ $('button.mobile-icon').on('click', function () {
 $('button.close-mobile-menu').on('click', function () {
   mobileMenu.removeClass('active')
 })
-
-$('.own-parallax').parallax()

@@ -4,10 +4,14 @@
 @mobileMenuBgColor: #fff;
 
 .navbar {
+  padding: 15px;
   width: 100%;
   background: @primary;
   position: fixed;
   z-index: 999;
+  @media (min-width: @lg) {
+    padding: 0;
+  }
   a {
     color: @headerLinkDarken;
     display: inline-block;

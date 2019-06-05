@@ -1,13 +1,15 @@
 .custom-section {
-  background: url('../img/parallax.jpg') no-repeat;
-  height: 320px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  color: #fff;
+  background: url('../img/parallax.jpg');
   text-align: center;
   .heading-wrapper {
     padding-bottom: 46px;
     text-transform: uppercase;
     position: relative;
     @media (min-width: @md) {
-      padding-bottom: 51px;
+      padding-bottom: 53px;
     }
     &:after {
       .header-divider();
@@ -18,6 +20,17 @@
         left: 50%;
         transform: translateX(-50%);
       }
+    }
+  }
+  .description-wrapper {
+    padding-bottom: 44px;
+    @media (min-width: @md) {
+      padding-bottom: 33px;
+    }
+    h3 {
+      color: rgba(@text-color, .8);
+      font-family: @font-secondary;
+      .font(16px);
     }
   }
 }
