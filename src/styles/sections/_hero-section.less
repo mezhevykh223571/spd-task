@@ -18,14 +18,21 @@
       text-align: left;
     }
     .heading-wrapper {
+      margin-bottom: 26px;
+      padding-bottom: 46px;
+      text-transform: uppercase;
+      position: relative;
       @media (min-width: @md) {
-        padding-bottom: 26px;
+        padding-bottom: 51px;
       }
       &:after {
-        content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAQBAMAAABD6/TTAAAAAXNSR0IB2cksfwAAADBQTFRFAAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa5tLzAAAABB0Uk5TAAECAwQF/wcICgsMDQYJDhQ+CqgAAACPSURBVHicY2AAAkZB3ECAAQKAapRwA6g6RiElY3xASRGkTFDZxTUUNwhxMRIEGWWWhh8kAw1jVHYjoCrFSIBBUCW8c9XuPWewg9O7V80odRJkEDK58XLP+f+4wJ/T83qdFYlURZyNjMq+Fe9m4gbv2q8AXc8oZBJbXtGBC7SXX3UGBStRoUpkDBEX28SkHAB/Xt9l1WAMzAAAAABJRU5ErkJggg==');
+        .header-divider();
+        height: 16px;
+        width: 74px;
+        background: url('../img/divider_white_u72_copy.png') no-repeat center;
       }
       h2 {
-        padding-bottom: 28px;
+        //padding-bottom: 28px;
         color: @text-color;
       }
     }

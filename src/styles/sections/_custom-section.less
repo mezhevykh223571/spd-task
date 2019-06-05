@@ -1,0 +1,23 @@
+.custom-section {
+  background: url('../img/parallax.jpg') no-repeat;
+  height: 320px;
+  text-align: center;
+  .heading-wrapper {
+    padding-bottom: 46px;
+    text-transform: uppercase;
+    position: relative;
+    @media (min-width: @md) {
+      padding-bottom: 51px;
+    }
+    &:after {
+      .header-divider();
+      height: 16px;
+      width: 74px;
+      background: url('../img/divider_white_u72_copy.png') no-repeat center;
+      @media (min-width: @sm) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

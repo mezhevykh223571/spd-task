@@ -2,11 +2,12 @@
 @list-bg: #fff;
 
 .card {
+  margin-bottom: 35px;
   padding-right: 15px;
   padding-left: 15px;
   width: 100%;
   font-weight: 700;
-  @media (min-width: @sm) {
+  @media (min-width: @md) {
     max-width: (100% / 3);
   }
   &-header {
@@ -22,23 +23,23 @@
     .card-cost {
       font-family: @font-secondary;
       border-bottom: 1px solid @border-color;
-      @media (min-width: @sm) {
-        .font(94px);
-      }
+      font-size: 94px;
+      line-height: 100px;
       .dollar {
-        @media (min-width: @sm) {
-          .font(35px);
-        }
+        .font(35px);
       }
     }
-    .card-sutitle {
+    .card-subtitle {
       padding: 18px 15px;
       .font(14px);
       font-style: italic;
       opacity: .5;
     }
     .card-text {
-
+      padding-top: 10px;
+      padding-bottom: 5px;
+      background: @secondary;
+      text-transform: uppercase;
     }
   }
   &-content {
