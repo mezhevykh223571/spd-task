@@ -1,15 +1,17 @@
-@import "../utils/_variables";
-@import "../utils/_mixins";
-
 // Header Colors
 @headerLink: #fff;
 @headerLinkDarken: rgba(@headerLink, .69);
+@mobileMenuBgColor: #fff;
 
 .navbar {
+  padding: 15px;
   width: 100%;
   background: @primary;
   position: fixed;
   z-index: 999;
+  @media (min-width: @lg) {
+    padding: 0;
+  }
   a {
     color: @headerLinkDarken;
     display: inline-block;
@@ -40,6 +42,7 @@
     }
   }
   .menu-depth-2 {
+    padding: 15px 65px 30px;
     width: 100%;
     background: #fff;
     opacity: 0;
@@ -60,15 +63,47 @@
       }
     }
     .top-pages {
-      width: 50%;
+      width: 44%;
       float: left;
+      @media (min-width: @xl) {
+        width: 50%;
+      }
+      @media (min-width: @xxl) {
+        width: 55%;
+      }
+      li {
+        width: 25%;
+        float: left;
+        .text {
+          padding-bottom: 10px;
+          display: inline-block;
+        }
+        .img {
+          padding-right: 20px;
+          display: inline-block;
+          @media (min-width: @xxl) {
+            padding-right: 45px;
+          }
+        }
+      }
     }
     .sub-menu {
-      width: 50%;
+      padding-top: 23px;
+      width: 56%;
       float: right;
       columns: 4;
+      @media (min-width: @xl) {
+        width: 50%;
+      }
+      @media (min-width: @xxl) {
+        width: 45%;
+      }
       li {
         width: 100%;
+        padding-bottom: 10px;
+        &:nth-of-type(4n) {
+          padding-bottom: 0;
+        }
       }
     }
   }
@@ -76,13 +111,33 @@
 
 .desktop-navbar {
   display: none;
-  @media (min-width: @md) {
+  @media (min-width: @lg) {
     display: block;
   }
 }
 
 .mobile-navbar {
-  @media (min-width: @md) {
+  @media (min-width: @lg) {
     display: none;
+  }
+  .mobile-menu {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    background: @mobileMenuBgColor;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: visibility .1s, opacity 1s, height 1s;
+    &.active {
+      height: auto;
+      visibility: visible;
+      opacity: 1;
+    }
+    a {
+      color: #333;
+    }
   }
 }

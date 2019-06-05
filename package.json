@@ -44,7 +44,6 @@
     "watch": "gulp watch",
     "dev": "gulp",
     "prod": "gulp --live",
-    "libsCss": "gulp libsCss",
     "styles": "gulp styles",
     "scripts": "gulp scripts",
     "fonts": "gulp fonts",
