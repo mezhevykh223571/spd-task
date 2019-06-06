@@ -1,7 +1,6 @@
 // Header Colors
 @headerLink: #fff;
 @headerLinkDarken: rgba(@headerLink, .69);
-@mobileMenuBgColor: #fff;
 
 .navbar {
   padding: 15px;
@@ -124,9 +123,10 @@
     height: 0;
     visibility: hidden;
     opacity: 0;
-    background: @mobileMenuBgColor;
+    background: @primary;
+    border-top: 1px solid #fff;
     position: fixed;
-    top: 0;
+    top: 59px;
     right: 0;
     left: 0;
     bottom: 0;
@@ -136,8 +136,63 @@
       visibility: visible;
       opacity: 1;
     }
-    a {
-      color: #333;
+    li {
+      padding: 15px;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.mobile-icon-wrapper {
+  display: block;
+  position: relative;
+}
+
+.hamburger-btn {
+  padding: 0;
+  width: 35px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: none;
+  vertical-align: middle;
+  &,
+  &:hover,
+  &:focus {
+    background: none;
+  }
+  &:hover {
+    .m-icon {
+      background: @headerLinkDarken;
+    }
+  }
+  .m-icon {
+    height: 3px;
+    width: 100%;
+    display: inline-block;
+    transition: @transition;
+    &,
+    &:focus {
+      background: @headerLink;
+    }
+    &:first-of-type {
+      margin-bottom: 5px;
+    }
+    &:last-of-type {
+      margin-top: 5px;
+    }
+  }
+  &.active {
+    .m-icon {
+      &:first-of-type {
+        transform: translateY(8px) rotateZ(45deg);
+      }
+      &:nth-of-type(2) {
+        transform: translateX(100vw);
+      }
+      &:last-of-type {
+        transform: translateY(-8px) rotateZ(-45deg);
+      }
     }
   }
 }
