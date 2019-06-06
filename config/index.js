@@ -7,6 +7,7 @@ export const liveEnv = process.argv.indexOf('--live') !== -1
 
 export const targets = config.targets
 export const project = targets.project
+export const server = targets.server
 
 export function handleError (error) {
   let currentPath = process.cwd()

@@ -1,0 +1,64 @@
+.brand-section {
+  position: relative;
+  &:after {
+    content: '';
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .38);
+    padding: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .container-outer-wrapper {
+    padding-top: 22px;
+    padding-bottom: 7px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    @media (min-width: @sm) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+  }
+  .left-col {
+    width: 100%;
+    text-align: center;
+    @media (min-width: @sm) {
+      max-width: 320px;
+      text-align: left;
+    }
+    @media (min-width: @md) {
+      max-width: 370px;
+    }
+    .heading-wrapper {
+      padding-bottom: 15px;
+      @media (min-width: @sm) {
+        padding-bottom: 4px;
+      }
+      h3 {
+        color: @sec-text-color;
+        font-weight: 700;
+      }
+    }
+    .description-wrapper {
+      padding-bottom: 25px;
+      @media (min-width: @sm) {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .right-col  {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    @media (min-width: @sm) {
+      margin-right: 0;
+      max-width: calc(100% - 350px);
+      width: 100%;
+    }
+    @media (min-width: @md) {
+      max-width: calc(100% - 435px);
+    }
+  }
+}

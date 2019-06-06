@@ -1,0 +1,47 @@
+h1, h2 {
+  font-family: @font-secondary;
+}
+
+h3, h4, h5 h6 {
+  font-family: @font-primary;
+}
+
+h1 {
+  .font(@fs-h1 - 3);
+  @media (min-width: @md) {
+    .font(@fs-h1);
+  }
+}
+
+h2 {
+  .font(@fs-h2 - 3);
+  @media (min-width: @md) {
+    .font(@fs-h2);
+  }
+}
+
+h3 {
+  color: @fs-h3-color;
+  .font(@fs-h3);
+}
+
+h4 {
+  .font(@fs-h4);
+}
+
+h5 {
+  .font(@fs-h5);
+}
+
+h6 {
+  .font(@fs-h6);
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: @fs-main;
+  line-height: 20px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

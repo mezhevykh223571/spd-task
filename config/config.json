@@ -8,9 +8,10 @@
       "fontsDirectory": "fonts",
       "imagesDirectory": "img",
       "jsMinFileName": "main.min.js",
-      "jsLibsMinFileName": "libsjs.min.js",
-      "cssMinFileName": "main.min.css",
-      "cssLibsMinFileName": "libscss.min.css"
+      "cssMinFileName": "main.min.css"
+    },
+    "server": {
+      "port": "5000"
     },
     "autoprefixer": [
       "last 2 versions",
@@ -26,8 +27,6 @@
       "interlaced": "true",
       "removeViewBox": "false",
       "cleanupIDs": "false"
-    },
-    "LESS_INCLUDE_PATHS": [
-    ]
+    }
   }
 }

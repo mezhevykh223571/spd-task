@@ -1,0 +1,48 @@
+.social-networks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 23px;
+  height: 23px;
+  display: block;
+  background: no-repeat center/cover;
+  transition: all 1.5s cubic-bezier(0.36, 0.86, 0.62, 1.04);
+  @media (min-width: @md) {
+    width: 46px;
+    height: 46px;
+  }
+  &:hover {
+    transform: rotate(720deg);
+  }
+}
+
+.icon-facebook {
+  background-image: url('../img/social-icons/facebook-icon.svg');
+}
+
+.icon-twitter {
+  background-image: url('../img/social-icons/twitter-icon.svg');
+}
+
+.icon-google-plus {
+  background-image: url('../img/social-icons/google-plus-icon.svg');
+}
+
+.icon-pinterest {
+  background-image: url('../img/social-icons/pinterest-icon.svg');
+}
+
+.icon-instagram {
+  background-image: url('../img/social-icons/instagram-icon.svg');
+}
+
+.icon-stumbleupon {
+  background-image: url('../img/social-icons/stumbleupon-icon.svg');
+}
+
+.icon-rss {
+  background-image: url('../img/social-icons/rss-icon.svg');
+}

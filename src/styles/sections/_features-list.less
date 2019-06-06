@@ -1,0 +1,97 @@
+.features-list-section {
+  padding-top: 65px;
+  padding-bottom: 70px;
+  @media (min-width: @sm) {
+    padding-top: 107px;
+    padding-bottom: 133px;
+  }
+  .heading-wrapper {
+    margin-bottom: 27px;
+    padding-bottom: 26px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    @media (min-width: @sm) {
+      text-align: left;
+    }
+    &:after {
+      .header-divider();
+    }
+  }
+  .left-img-block {
+    padding-top: 0;
+    width: 100%;
+    text-align: center;
+    order: 2;
+    @media (min-width: @sm) {
+      padding-top: 23px;
+      padding-right: 50px;
+      max-width: 55%;
+      text-align: left;
+      order: 1;
+    }
+    @media (min-width: @md) {
+      max-width: 46%;
+    }
+    img {
+      width: 100%;
+      box-shadow: 0 20px 40px 5px rgba(0, 0, 0, .15);
+    }
+  }
+  .right-text-block {
+    order: 1;
+    @media (min-width: @sm) {
+      order: 2;
+      max-width: 45%;
+    }
+    @media (min-width: @md) {
+      max-width: 41%;
+    }
+  }
+  .description-wrapper {
+    padding-bottom: 44px;
+    text-align: center;
+    @media (min-width: @sm) {
+      text-align: left;
+    }
+  }
+  .list {
+    padding-bottom: 52px;
+    @media (min-width: 768px) {
+      padding-bottom: 0;
+    }
+    li {
+      padding-left: 60px;
+      position: relative;
+      @media (min-width: @sm) {
+        padding-left: 72px;
+      }
+      &:not(:last-of-type) {
+        padding-bottom: 37px;
+      }
+      &:before {
+        content: '';
+        padding: 19px;
+        display: inline-block;
+        background: no-repeat center 10px;
+        background-size: 18px;
+        border: 2px solid @secondary;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &:nth-of-type(odd):before {
+        background-image: url('../img/odd-list-item.svg');
+      }
+      &:nth-of-type(even):before {
+        background-image: url('../img/even-list-item.svg');
+      }
+      .title {
+        padding-bottom: 4px;
+        color: @fs-h3-color;
+        font-weight: 600;
+      }
+    }
+  }
+}

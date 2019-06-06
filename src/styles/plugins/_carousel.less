@@ -1,0 +1,52 @@
+.own-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .own-stage {
+    display: flex;
+    width: 100%;
+    transition: @transition;
+    position: relative;
+  }
+  .slide {
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 100%;
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    @media (min-width: @sm) {
+      padding-right: 47px;
+      padding-left: 47px;
+      max-width: 50%;
+    }
+    @media (min-width: @md) {
+      max-width: (100% / 3);
+    }
+  }
+  .button-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 22%;
+    transform: translateY(-50%);
+  }
+  #left-btn,
+  #right-btn {
+    padding: 8px;
+    font-size: 0;
+    background: transparent;
+    width: auto;
+    border: solid @secondary;
+    border-width: 0 1px 1px 0;
+    position: absolute;
+    top: 0;
+  }
+  #left-btn {
+    left: 5px;
+    transform: rotate(135deg);
+  }
+  #right-btn {
+    right: 5px;
+    transform: rotate(-45deg);
+  }
+}
