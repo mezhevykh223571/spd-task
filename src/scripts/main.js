@@ -1,16 +1,16 @@
 import jQuery from 'jquery'
 import './plugins/tabs'
+import './plugins/carousel'
 
 window.$ = window.jQuery = jQuery
 
 $('.features-tabs').tabs()
 
-let mobileMenu = $('.mobile-menu')
+$('.testimonials-container').carousel()
 
-$('button.mobile-icon').on('click', function () {
-  mobileMenu.addClass('active')
-})
+const mobileMenu = $('.mobile-menu')
 
-$('button.close-mobile-menu').on('click', function () {
-  mobileMenu.removeClass('active')
+$('button.hamburger-btn').on('click', function () {
+  $(this).toggleClass('active')
+  mobileMenu.toggleClass('active')
 })

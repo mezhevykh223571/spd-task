@@ -34,11 +34,16 @@
       max-width: 48%;
     }
   }
+  .h-100 {
+    height: 100%;
+  }
   .form-control {
     padding-bottom: 30px;
     textarea {
+      min-height: 130px;
+      height: 100%;
       @media (min-width: @md) {
-        min-height: 153px;
+        min-height: initial;
       }
     }
   }

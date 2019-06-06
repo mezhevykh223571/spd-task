@@ -1,21 +1,19 @@
 .custom-section {
   padding-top: 65px;
-  padding-bottom: 65px;
+  padding-bottom: 64px;
   color: #fff;
   background: url('../img/parallax.jpg');
   text-align: center;
   .heading-wrapper {
-    padding-bottom: 46px;
+    margin-bottom: 20px;
+    padding-bottom: 34px;
     text-transform: uppercase;
     position: relative;
-    @media (min-width: @md) {
-      padding-bottom: 53px;
-    }
     &:after {
       .header-divider();
       height: 16px;
       width: 74px;
-      background: url('../img/divider_white_u72_copy.png') no-repeat center;
+      background: url('../img/divider-white.png') no-repeat center;
       @media (min-width: @sm) {
         left: 50%;
         transform: translateX(-50%);
@@ -30,7 +28,7 @@
     h3 {
       color: rgba(@text-color, .8);
       font-family: @font-secondary;
-      .font(16px);
+      font-size: 16px;
     }
   }
 }

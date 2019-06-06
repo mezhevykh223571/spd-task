@@ -7,11 +7,17 @@ h3, h4, h5 h6 {
 }
 
 h1 {
-  .font(@fs-h1);
+  .font(@fs-h1 - 3);
+  @media (min-width: @md) {
+    .font(@fs-h1);
+  }
 }
 
 h2 {
-  .font(@fs-h2);
+  .font(@fs-h2 - 3);
+  @media (min-width: @md) {
+    .font(@fs-h2);
+  }
 }
 
 h3 {

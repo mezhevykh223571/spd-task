@@ -1,7 +1,7 @@
 @text-color: #fff;
 
 .hero-section {
-  padding-top: 65px;
+  padding-top: 120px;
   padding-bottom: 65px;
   min-height: 100vh;
   background: url('../img/Header_Panel.jpg') no-repeat center top/cover;
@@ -9,9 +9,11 @@
   flex-direction: column;
   justify-content: center;
   .left-col {
+    padding-top: 30px;
     padding-bottom: 60px;
     text-align: center;
     @media (min-width: @md) {
+      padding-top: 0;
       padding-bottom: 0;
       max-width: 520px;
       width: 100%;
@@ -29,7 +31,7 @@
         .header-divider();
         height: 16px;
         width: 74px;
-        background: url('../img/divider_white_u72_copy.png') no-repeat center;
+        background: url('../img/divider-white.png') no-repeat center;
       }
       h2 {
         color: @text-color;
@@ -40,7 +42,7 @@
       h3 {
         color: rgba(@text-color, .8);
         font-family: @font-secondary;
-        .font(16px);
+        font-size: 16px;
       }
     }
   }
