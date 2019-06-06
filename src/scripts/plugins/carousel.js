@@ -43,15 +43,15 @@ import jQuery from 'jquery'
       dir === 'right' ? count++ : count--
 
       if (count > 0 && dir === 'right') {
-        count = 0
+        count = totalSlides
 
-        return false
+        // return false
       }
 
       if (count < totalSlides && dir === 'left') {
-        count = totalSlides
+        count = 0
 
-        return false
+        // return false
       }
 
       stage.css({

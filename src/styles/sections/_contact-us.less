@@ -40,7 +40,11 @@
   .form-control {
     padding-bottom: 30px;
     textarea {
+      min-height: 130px;
       height: 100%;
+      @media (min-width: @md) {
+        min-height: initial;
+      }
     }
   }
   .action-btn-wrapper {
